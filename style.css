@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#header {
+    top: 0;
+    position: absolute;
+    background-image: url('header-background.gif');
+    background-size: 100%;
+    display: block;
+    height: 56px;
+    width: 100%;
+}
+
+#header-logo img {
+    display: inline-flex;
+    position: relative;
+    vertical-align: center;
+    height: 40px;
+    width: auto;
+    display: inline;
+}
