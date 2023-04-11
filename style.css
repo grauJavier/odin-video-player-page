@@ -1,24 +1,266 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 #header {
-    top: 0;
-    position: absolute;
-    background-image: url('header-background.gif');
-    background-size: 100%;
-    display: block;
-    height: 56px;
-    width: 100%;
+  position: fixed;
+  top: -20px;
+  left: -8px;
+  background-image: url("header-background.gif");
+  background-size: 100%;
+  display: flex;
+  height: 80px;
+  width: 120%;
+  align-items: center;
+  transform: rotate(-1.2deg);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  border: 5px solid black;
 }
 
-#header-logo img {
-    display: inline-flex;
+#header-logo,
+#header a {
+  height: 55px;
+  width: auto;
+  position: absolute;
+  left: 5px;
+  transform: rotate(1.2deg);
+}
+
+#menu {
+    border: 5px solid black;
+    background-image: url('menu-background.png');
+    box-shadow: inset red;
+}
+
+#menu,
+#menu-solid-shadow {
+  z-index: -1;
+  position: fixed;
+  left: -20px;
+  background-color: rgb(255, 0, 204);
+  height: 200%;
+  width: 280px;
+  transform: rotate(1.3deg);
+}
+
+#menu-solid-shadow {
+  background-color: rgb(255, 255, 0);
+  left: 5px;
+  transform: rotate(0.5deg);
+}
+
+#buttons {
     position: relative;
-    vertical-align: center;
-    height: 40px;
-    width: auto;
+    margin: auto;
+    top: 130px;
+    transform: rotate(-1.3deg);
+    text-align: center;
+    width: 246px;
+    height: auto;
+    font-family: 'Courier Prime','Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: large;
+    color:rgb(255, 255, 0);
+}
+
+.menu-button {
+    background-color: rgb(0, 187, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+.menu-button:hover {
+    color: rgb(0, 0, 0);
+}
+
+#home {
+    transform: rotate(1.1deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#home:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#latest-videos {
+    transform: rotate(-1deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#latest-videos:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#trending {
+    transform: rotate(1.2deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#trending:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#retro-gaming {
+    transform: rotate(-1.1deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#retro-gaming:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#cartoons {
+    transform: rotate(1.1deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#cartoons:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#tv-series {
+    transform: rotate(-1deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#tv-series:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+#movie-trailers {
+    transform: rotate(1.4deg);
+    box-shadow: 6px 6px rgb(255, 255, 0);
+}
+
+#movie-trailers:hover {
+    position: relative;
+    bottom: 4px;
+    right: 4px;
+    box-shadow: 9px 9px rgb(255, 255, 0);
+}
+
+body {
+    background-image: url('./body-background.png');
+}
+
+#body-box {
+    position: absolute;
+    right: 380px;
+    top: 90px;
+    width: 830px;
+    height: auto;
+    z-index: -2;
+    display: block;
+    margin-right: 10px;
+    text-align: center;
+    clear: both;
+}
+
+#main-video {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: block;
+    clear: both;
+}
+
+#main-video::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#main-video h1 {
+    display: inline-block;
+    font-size: xx-large;
+    font-family: 'Courier Prime','Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 10px 10px black;
+    margin-bottom: 50px;
+}
+#thumbnail-menu {
+    position: absolute;
+    right: 0px;
+    top: 90px;
+    max-width: 450px;
+    max-height: 100%;
+    z-index: -2;
     display: inline;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.326);
+}
+
+.thumbnail {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail img {
+    height: 85px;
+    width: 150px;
+    border-radius: 5px;
+    display: inline;
+}
+
+.thumbnail-text {
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+.thumbnail:hover {
+
+    .thumbnail-title {
+        background-color: black;
+        box-shadow: 6px 6px grey;
+        color: white;
+    };
+
+    .thumbnail-cutline {
+        background-color: black;
+        box-shadow: 6px 6px grey;
+        color: white;
+    };
+}
+
+.thumbnail-title, .thumbnail-cutline {
+    display: block;
+    width: 200px;
+    background-color: white;
+    box-shadow: 6px 6px black;
+    margin-bottom: 10px;
+    font-family: 'Courier Prime','Courier New', Courier, monospace;
+    font-size: small;
+}
+
+.thumbnail-title {
+    font-weight: bold;
+    color: black
+}
+
+.thumbnail-cutline {
+    color: grey;
+}
+
+#main-video-title {
+    padding: 5px 5px;
 }

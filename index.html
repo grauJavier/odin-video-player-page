@@ -1,34 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>RETROtube</title>
-</head>
-<body>
+    <script>
+      function mainVideo(title, url) {
+        document.getElementById("main-video-title").innerHTML = title;
+        document.getElementById("main-video-embed").setAttribute('src', url);
+      }
+    </script>
+  </head>
+  <body>
     <div id="header">
-        <div id="header-logo">
-            <img src="RETROtube - Logo.png" />
-        </div>
-        <div id="search-bar">
-            
-        </div>
+      <a href="./index.html"
+        ><img id="header-logo" src="RETROtube - Logo.png"
+      /></a>
+      <div id="search-bar"></div>
     </div>
-    <section id="menu">
-        <ul>
-            <li>Home</li>
-            <li>Latest videos</li>
-            <li>Trending</li>
-            <li>RETRO Gaming</li>
-            <li>Cartoons</li>
-            <li>TV Series</li>
-            <li>Movie Trailers</li>
-        </ul>
+    <div id="menu-solid-shadow"></div>
+    <div id="menu">
+      <ul id="buttons">
+        <li class="menu-button" id="home">Home</li>
+        <li class="menu-button" id="latest-videos">Latest videos</li>
+        <li class="menu-button" id="trending">Trending</li>
+        <li class="menu-button" id="retro-gaming">RETRO Gaming</li>
+        <li class="menu-button" id="cartoons">Cartoons</li>
+        <li class="menu-button" id="tv-series">TV Series</li>
+        <li class="menu-button" id="movie-trailers">Movie Trailers</li>
+      </ul>
+    </div>
+    <section id="body-box">
+      <div id="main-video">
+        <h1 id="main-video-title">
+          Ryuichi Sakamoto relaxing winter piano collection
+        </h1>
+        <iframe id="main-video-embed"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-FX1KrzqeuM?modestbranding=0&amp;rel=0&amp;showinfo=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
-    <section id="body">
-
-    </section>
-</body>
+    <div id="thumbnail-menu">
+      <div class="thumbnail" id="thumbnail-01">
+        <img
+          id="thumbnail-foto"
+          src="https://i.ytimg.com/vi/-FX1KrzqeuM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCaKJ9QEgOoDyzXmOhTd1My4ZpnWQ"
+          onclick="mainVideo('Ryuichi Sakamoto relaxing winter piano collection', 'https://www.youtube.com/embed/-FX1KrzqeuM')"
+        />
+        <div class="thumbnail-text">
+          <p class="thumbnail-title">
+            Ryuichi Sakamoto relaxing winter piano collection
+          </p>
+          <p class="thumbnail-cutline">
+            SAYA relaxing piano series<br />247.091 views
+          </p>
+        </div>
+      </div>
+      <div class="thumbnail" id="thumbnail-02">
+        <img
+          class="thumbnail-foto"
+          src="https://i.ytimg.com/vi/-P-JrLVluxQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA3QI-ONisrJLaIJVQ0OB18t2s_1Q"
+          onclick="mainVideo('[1h repeat | No Ads] 류이치 사카모토 대표곡 피아노 연주 | 1시간 반복 ', 'https://www.youtube.com/embed/-P-JrLVluxQ')"
+        />
+        <div class="thumbnail-text">
+          <p class="thumbnail-title">
+            [1h repeat | No Ads] 류이치 사카모토 대표곡 피아노 연주 | 1시간 반복
+          </p>
+          <p class="thumbnail-cutline">
+            시나브로의 마음챙김 음악<br />1942 views
+          </p>
+        </div>
+      </div>
+      <div class="thumbnail" id="thumbnail-03">
+        <img
+          class="thumbnail-foto"
+          src="https://i.ytimg.com/vi/GTMcaAKXxAY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc4blJO1-SArrRSIgSoPiYYC7yJA"
+          onclick="mainVideo('[Playlist] 내가 사랑한 류이치사카모토의 음악', 'https://www.youtube.com/embed/GTMcaAKXxAY')"
+        />
+        <div class="thumbnail-text">
+          <p class="thumbnail-title">
+            [Playlist] 내가 사랑한 류이치사카모토의 음악
+          </p>
+          <p class="thumbnail-cutline">
+            my blue valentine<br />432.626 views
+          </p>
+        </div>
+      </div>
+      <div class="thumbnail" id="thumbnail-04">
+        <img
+          class="thumbnail-foto"
+          src="https://i.ytimg.com/vi/F7Ni1nMMm5I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuglneEXLR-adhZCQeNkhpVj2vFA"
+          onclick="mainVideo('[Playlist] 위안의 노래를 듣는 시간, 류이치 사카모토', 'https://www.youtube.com/embed/F7Ni1nMMm5I')"
+        />
+        <div class="thumbnail-text">
+          <p class="thumbnail-title">
+            [Playlist] 위안의 노래를 듣는 시간, 류이치 사카모토
+          </p>
+          <p class="thumbnail-cutline">
+            책바 Chaegbar<br />219.156 views
+          </p>
+        </div>
+      </div>
+      <div class="thumbnail" id="thumbnail-05">
+        <img
+          class="thumbnail-foto"
+          src="https://i.ytimg.com/vi/ccti-6ijn1c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcXtg8ySCKYyPuoSAiMUV0BnG23g"
+          onclick="mainVideo('𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 | \'세상은 소리로 가득 차있어요\' 류이치 사카모토', 'https://www.youtube.com/embed/ccti-6ijn1c')"
+        />
+        
+        <div class="thumbnail-text">
+          <p class="thumbnail-title">
+            𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭 | '세상은 소리로 가득 차있어요' 류이치 사카모토
+          </p>
+          <p class="thumbnail-cutline">
+            마이오데스 My Odes<br />1,5M visualizations
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
